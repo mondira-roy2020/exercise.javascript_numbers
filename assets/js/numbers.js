@@ -1,60 +1,38 @@
-function Compute(expression) {
+function compute(expression) {
     // TODO - write method definition here
+    // The expression [String] is an arithmetical formula "1 + 1"
+    //it can contain:[0-9] digits 1.5, 0.5 or .5 decimal fractions
+     //-5, -.4, -5.55 negative values, 2e-2, .25e+12, -3e-10 exponential notation values
+    //* multiplication sign / division sign + plus sign - subtraction sign ( and ) parentheses
+    
+    //the PEMDAS rules are followed:
+      //parentheses first
+      //then multiplication and division (from left to right)
+      //then addition and subtraction (from left to right)
+      //the multiplication sign is omitted before parentheses; 4(2+1); equals to 4*(2+1)
+      //var expression = "1+1";
+      //var stringMath = require('string-math');
+       
+      var result = stringMath(expression);
+      return result;        
+
 }
-
-function Compute(expression) {
-    // TODO - write method definition here
-    
-    function addition(){
-        let array = "1+1".split("+");
-        console.log(array);
+//console.log(compute("1+1"));
+function add(){
+    console.log(compute("1+1"));
+    console.log(compute("1+1+1"));
+    console.log(compute("3+2+1"));
     }
-        let filteredArray = array.filter(function(object) {
-            let result = 0;
-         for(let i=0;i<array.length;i++){
-             result = parseInt(array[i]) +result;
-         }
-         return result;   
-        }
-    }       
-     console.log(array);
-        console.log(addition);
-
-
-// additionTest();
-// subtractionTest();
-// multiplicationTest();
-// divisionTest();
-// additionAndSubtractionTest();
-// additionAndMultiplicationTest();
-// additionAndDivisonTest();
-// subtractionAndMultiplicationTest();
-// subtractionAndDivisonTest();
-// allOperatorTest();
-function subtraction(num1,num2){
-    
-    let result = 0;
-     for(let i=0;i<array.length;i++){
-         result = parseInt(array[i]) -result;
-     }
-     return result;   
-    }
-    
-    //console.log(array);
-    //console.log(subtraction);
-    
-    function multiplication(num1,num2){
-        
-            let result = 1;
-         for(let i=0;i<array.length;i++){
-             result = parseInt(array[i]) *result;
-         }
-         return result;   
-        }
-        
-        //console.log(array);
-        console.log(addition);
+function subtract(){
+    console.log(compute("1-1"));
+    console.log(compute("1-1-1"));
+    console.log(compute("5-2-1"));
 }
-
-
-
+function multiplication();
+function division();
+function additionAndSubtraction();
+additionAndMultiplicationTest();
+additionAndDivisonTest();
+subtractionAndMultiplicationTest();
+subtractionAndDivisonTest();
+allOperatorTest();
